@@ -1,18 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Train Schedule</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="schedule.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Train Schedule</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase References -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  <script type="text/javascript" src="schedule.js"></script>
 
 </head>
-<body>
 
-    
-    
+<body>
+  <div class="container">
+    <!-- Heading/Jumbotron -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-4">Train Schdule</h1>
+            <h4 class="display-5">The Best Real-time train Schedule in the U.S.</h4>          
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Train Data Table -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-div"><span class="title">Current Schdule</span>
+        <table>
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min.)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody id="table">
+            <!-- The new data will be displayed here -->
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    <!-- User Input Form -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-div"> Add Train Schedule
+        <form>
+          <span>Train Name</span><br />
+          <input type="text" id="name-input" placeholder=""><br />
+          <span>Destination</span><br />
+          <input type="text" id="dest-input" placeholder=""><br />
+          <span>First Train Time</span><br />
+          <input type="date" id="first-input" min="2000-01-01" max="2020-12-31" placeholder=""><br />
+          <span>Frequency (min.)</span><br />
+          <input type="text" id="freq-input" placeholder=""><br />
+          <input type="button" id="click-button" value="Submit"><br />
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 </body>
+
 </html>
