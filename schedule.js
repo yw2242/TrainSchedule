@@ -99,7 +99,7 @@
   
       // Next Train
       var nextTrain = moment().add(taway, "minutes");
-      console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+      console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
     
 
       // Change the HTML to reflect
@@ -107,7 +107,7 @@
         $("<td>").text(tname),
         $("<td>").text(tdest),
         $("<td>").text(tfreq),
-        $("<td>").text(nextTrain, "hh:mm"),
+        $("<td>").text(moment(nextTrain).format("HH:mm")),
         $("<td>").text(taway),
       );
 

@@ -1,5 +1,7 @@
-body {
-
+.title {
+    color: #9d8083;
+    font-style: oblique;
+    text-decoration: underline;
 }
 
 
@@ -21,6 +23,12 @@ form input {
     margin: 10px;
     border: 1px dashed #49554c;
     border-radius: 5px;
+}
+
+
+
+input {
+    background-color: floralwhite;
 }
 
 
@@ -76,6 +84,7 @@ table th, table td{
 table th {
     text-align: center;
     border-radius: 10px;
+    color: olivedrab;
 }
 
 
