@@ -75,7 +75,10 @@
       console.log(tfreq);
 
 
-      var firstTimeConverted = moment(tfirst, "hh:mm").subtract(1, "years");
+      var firstTime = "05:00";
+
+
+      var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
       console.log(firstTimeConverted);
 
       
@@ -89,13 +92,13 @@
       // Time apart (remainder)
       var tRemainder = diffTime % tfreq;
       console.log(tRemainder);
-  
+
       // Minute Until Train
       var taway = tfreq - tRemainder;
       console.log("MINUTES TILL TRAIN: " + taway);
   
       // Next Train
-      var nextTrain = moment().add(nextTrain, "minutes");
+      var nextTrain = moment().add(taway, "minutes");
       console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
     
 
@@ -104,7 +107,7 @@
         $("<td>").text(tname),
         $("<td>").text(tdest),
         $("<td>").text(tfreq),
-        $("<td>").text(nextTrain),
+        $("<td>").text(nextTrain, "hh:mm"),
         $("<td>").text(taway),
       );
 
