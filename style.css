@@ -31,7 +31,23 @@ form input {
     border: none;
     float: right;
     margin: 3px 10px;
+    background-color: lightblue;
+    color: white;
 }
+
+
+
+#click-button:hover {
+    background-color: steelblue;
+    color: white;
+    transform: scale(1.05) perspective(1px);
+}
+
+
+
+#click-button:active {
+    box-shadow: 0 3px 3px 0 #8f8d8d;
+  }
 
 
 
