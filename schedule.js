@@ -75,7 +75,6 @@
       console.log(tfreq);
 
 
-      var tFrequency = tfreq;
       var firstTimeConverted = moment(tfirst, "hh:mm").subtract(1, "years");
       console.log(firstTimeConverted);
 
@@ -88,11 +87,11 @@
       console.log("DIFFERENCE IN TIME: " + diffTime);
 
       // Time apart (remainder)
-      var tRemainder = diffTime % tFrequency;
+      var tRemainder = diffTime % tfreq;
       console.log(tRemainder);
   
       // Minute Until Train
-      var taway = tFrequency - tRemainder;
+      var taway = tfreq - tRemainder;
       console.log("MINUTES TILL TRAIN: " + taway);
   
       // Next Train
@@ -104,8 +103,8 @@
       var newRow = $("<tr>").append(
         $("<td>").text(tname),
         $("<td>").text(tdest),
-        $("<td>").text(nextTrain),
         $("<td>").text(tfreq),
+        $("<td>").text(nextTrain),
         $("<td>").text(taway),
       );
 
